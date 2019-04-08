@@ -739,7 +739,8 @@ class DomainConnect(object):
 
         # Domain and host should be lower cased
         domain = domain.lower()
-        host = host.lower()
+        if host is not None:
+            host = host.lower()
 
         # Convert the params to all lower case
         newParams = {}
